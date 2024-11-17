@@ -1,0 +1,424 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajuste para desplazar el contenido cuando el footer está fijo */
+body {
+    padding-bottom: 15px; /* Altura aproximada del footer */
+}
+
+/* Banner */
+.banner {
+    background-image: url('../img/Alquimia del Corazón.png'); /* Cambia esto por la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 15px); /* 50px es la altura del footer */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.menu {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Suaviza la transición de color */
+}
+
+/* Cambio de color al pasar el ratón por encima */
+.menu ul li a:hover {
+    color: #ffd700; /* Cambia este color al que prefieras para el hover */
+}
+
+/* Color del enlace activo */
+.menu ul li a.active {
+    color: #ffd700; /* Cambia este color al que prefieras para el enlace activo */
+}
+
+/* Color del enlace activo usando :target */
+section:target + .menu ul li a[href*="#inicio"],
+#inicio:target ~ .menu ul li a[href="#inicio"],
+#nosotros:target ~ .menu ul li a[href="#nosotros"],
+#servicios:target ~ .menu ul li a[href="#servicios"],
+#contacto:target ~ .menu ul li a[href="#contacto"] {
+    color: #ff6347; /* Cambia este color al que prefieras para el enlace activo */
+}
+/* Estilo para el título en la sección de Inicio */
+#inicio h2 {
+    font-size: 2.5em; /* Cambia el tamaño de la fuente del título */
+    font-family: Arial, sans-serif; /* Cambia la fuente si lo deseas */
+    font-weight: bold;
+    color: #333; /* Cambia el color del título si lo deseas */
+    margin-bottom: 20px; /* Ajusta el espacio debajo del título */
+}
+
+/* Estilo para el contenido de la sección de Inicio */
+#inicio p {
+    font-size: 1.2em; /* Cambia el tamaño de la fuente del contenido */
+    font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #555; /* Cambia el color del contenido si lo deseas */
+}
+
+/* Contenedor de videos */
+.video-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea */
+    justify-content: center; /* Centra los videos */
+    gap: 20px; /* Espaciado entre los videos */
+    height: calc(100vh - 300px); /* Altura igual a la altura del banner menos el espacio para el footer */
+}
+
+/* Estilos para los videos */
+.video-item {
+    flex: 1 1 30%; /* Crece, se reduce y tiene un tamaño base del 30% */
+    max-width: 600px; /* Ancho máximo para cada video */
+    height: 100%; /* Asegura que los videos ocupen el 100% de la altura del contenedor */
+}
+
+#servicios {
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px; /* Aumenta este valor para más separación */
+
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 20px 0; /* Espaciado vertical para la cuadrícula */
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para las imágenes */
+}
+
+/* Estilos generales para la sección de servicios */
+        #servicios {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Estilo para el título de la sección */
+        #servicios h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        /* Estilo del contenedor del carrusel */
+        .carrusel {
+            position: relative;
+            max-width: 800px; /* Ancho máximo del carrusel */
+            margin: auto; /* Centrar el carrusel */
+            overflow: hidden; /* Ocultar contenido que se sale del área */
+        }
+
+        /* Estilo para las diapositivas */
+        .slides {
+            display: flex; /* Usar flexbox para alinear diapositivas en fila */
+            transition: transform 0.5s ease; /* Transición suave al cambiar de diapositiva */
+        }
+
+        .slide {
+            min-width: 100%; /* Cada diapositiva ocupa el 100% del ancho del contenedor */
+            box-sizing: border-box; /* Incluir el padding y el border en el ancho */
+            padding: 20px; /* Espaciado interno */
+            display: none; /* Ocultar las diapositivas por defecto */
+        }
+
+        /* Estilo para la diapositiva activa */
+        .slide.active {
+            display: block; /* Mostrar la diapositiva activa */
+        }
+
+        /* Botones del carrusel */
+        button {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro transparente */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            padding: 10px; /* Espaciado interno */
+            cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+            font-size: 1.5em; /* Tamaño del texto */
+        }
+
+        button:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Cambiar color al pasar el mouse */
+        }
+
+        .prev, .next {
+            position: absolute; /* Posicionamiento absoluto */
+            top: 50%; /* Centrar verticalmente */
+            transform: translateY(-50%); /* Ajustar el desplazamiento */
+            color: white; /* Color del texto */
+            z-index: 1; /* Asegurarse de que los botones estén por encima */
+        }
+
+        .prev {
+            left: 10px; /* Posición a la izquierda */
+        }
+
+        .next {
+            right: 10px; /* Posición a la derecha */
+        }
+
+
+
+/* Sección de Testimonios */
+#testimonios {
+    background-color: #f0f4f8;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+#testimonios h2 {
+    text-align: center;
+}
+
+#testimonios blockquote {
+    font-style: italic;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid #4a90e2;
+}
+
+/* Sección de Preguntas Frecuentes */
+#preguntas-frecuentes {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f4f8; /* Color de fondo claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#preguntas-frecuentes h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+/* Pregunta individual (FAQ item) */
+.faq-item {
+    margin: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Estilo para el título de cada pregunta */
+.faq-item summary {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    list-style: none;
+    outline: none;
+    transition: color 0.3s;
+}
+
+/* Icono decorativo para expandir/contraer */
+.faq-item summary::after {
+    content: "+";
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s;
+}
+
+/* Cambiar icono cuando está abierto */
+.faq-item details[open] summary::after {
+    transform: rotate(45deg);
+}
+
+/* Cambia el color al hacer hover */
+.faq-item summary:hover {
+    color: #4a90e2;
+}
+
+/* Estilo para el texto de cada respuesta */
+.faq-item p {
+    margin: 10px 0 0;
+    padding: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+    background-color: #f4f8fc;
+    border-radius: 5px;
+    color: #333;
+    transition: max-height 0.3s;
+}
+
+/* Animación de apertura de las respuestas */
+.faq-item details {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Estilos para el enlace de "Volver al inicio" */
+.volver-inicio {
+    display: block;
+    margin-top: 20px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.volver-inicio:hover {
+    color: #333;
+}
+
+/* Estilos generales de la sección de contacto */
+#contacto {
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Estilo para el título de la sección */
+#contacto h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
+}
+
+/* Estilo para el texto de introducción */
+#contacto p {
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
+}
+
+/* Contenedor para los iconos de contacto */
+.iconos-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 200px; /* Espacio entre los iconos */
+}
+
+/* Estilos para los enlaces de iconos */
+.icono {
+    color: #4a90e2; /* Color de texto de los iconos */
+    font-size: 1.5em; /* Tamaño del icono */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover para los iconos */
+.icono:hover {
+    color: #ffd700; /* Cambiar color al pasar el mouse */
+}
+
+.icono-img {
+    width: 48px; /* Ajusta el tamaño según sea necesario */
+    height: 48px; /* Ajusta el tamaño según sea necesario */
+    vertical-align: middle; /* Alinear el icono con el texto */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+/* Estilo para el texto de los letreros */
+.icono span {
+    display: block; /* Mostrar el texto en un bloque debajo del icono */
+    font-size: 0.7em; /* Tamaño del texto */
+    color: #4a90e2; /* Color del texto */
+    font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-size: 0.9em;
+}
+
+/* Otras secciones */
+section {
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* Responsive */
+
+/* Estilos para pantallas grandes */
+@media (min-width: 768px) {
+        .image-grid {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+
+
+}
+
+@media (max-width: 767px) {
+    .menu ul li a {
+        font-size: 1em;
+    }
+
+    .video-item {
+        flex: 1 1 100%; /* En dispositivos pequeños, cada video ocupa el 100% */
+        max-width: 90%; /* Asegura que no exceda el ancho del dispositivo */
+        height: auto; /* Elimina la altura fija para que se ajuste al contenido */
+    }
+  
+        #servicios {
+        width: 90%;
+        margin-top: 1850px; /* Aumenta este valor para más separación */
+    }
+
+            .carrusel {
+            max-width: 100%; /* Ancho máximo del carrusel */
+            margin-top: 20px;
+            overflow: hidden; /* Ocultar contenido que se sale del área */
+        }
+    .icono-img {
+    width: 32px; /* Ajusta el tamaño según sea necesario */
+    height: 32px; /* Ajusta el tamaño según sea necesario */
+    vertical-align: middle; /* Alinear el icono con el texto */
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+}
+
+.iconos-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Espacio entre los iconos */
+}
+
+}
+
