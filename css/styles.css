@@ -479,6 +479,18 @@ section {
 
 
 /* Responsive */
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .banner {
+        height: 60vh; /* Ajusta la altura en dispositivos pequeños */
+    }
+    .banner h1 {
+        font-size: 8vw; /* Ajusta el tamaño del título */
+    }
+    .banner h2 {
+        font-size: 5vw; /* Ajusta el tamaño del subtítulo */
+    }
+}
 
 /* Estilos para pantallas grandes */
 @media (min-width: 768px) {
