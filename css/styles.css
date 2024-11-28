@@ -23,28 +23,35 @@ body {
 }
 
 .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
     background: rgba(0, 0, 0, 0.5);
+    color: #fff;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
 }
 
 .menu ul {
-    list-style: none;
     display: flex;
-    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .menu ul li {
     margin: 0 15px;
+    text-align: center;
 }
 
 .menu ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
-    transition: color 0.3s ease; /* Suaviza la transición de color */
+    transition: color 0.3s ease; /* Suaviza la transición de color*/
 }
 
 /* Cambio de color al pasar el ratón por encima */
@@ -55,6 +62,11 @@ body {
 /* Color del enlace activo */
 .menu ul li a.active {
     color: #ffd700; /* Cambia este color al que prefieras para el enlace activo */
+}
+
+/* Estilo del botón hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
 }
 
 /* Color del enlace activo usando :target */
@@ -374,6 +386,64 @@ section {
     text-align: center;
 }
 
+#descargas {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.recursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recurso {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.recurso img {
+    width: 50px;
+    height: 50px;
+}
+
+.recurso-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.recurso-info p {
+    margin: 5px 0 15px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.boton-descarga {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.boton-descarga:hover {
+    background-color: #0056b3;
+}
+
+
 
 /* Responsive */
 
@@ -383,13 +453,42 @@ section {
         grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
     }
 
-
 }
 
 @media (max-width: 767px) {
-    .menu ul li a {
+    /*.menu ul li a {
         font-size: 1em;
+    }*/
+.menu ul {
+        display: none; /* Oculta el menú inicialmente */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0;
     }
+
+    .menu ul.active {
+        display: flex; /* Muestra el menú al activarse */
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón en pantallas pequeñas */
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
 
     .video-item {
         flex: 1 1 100%; /* En dispositivos pequeños, cada video ocupa el 100% */
@@ -421,4 +520,3 @@ section {
 }
 
 }
-
