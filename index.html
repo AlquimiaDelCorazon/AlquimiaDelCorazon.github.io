@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hipnosis, meditaciones guiadas">
     <title>Alquimia Del Corazon</title>
     <link rel="stylesheet" href="css/styles.css">
         <!-- Agregar el enlace a Google Fonts -->
@@ -13,53 +14,57 @@
     <!-- Sección de banner -->
     <header class="banner" id="banner">
         <nav class="menu">
-            <ul>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            &#9776; <!-- Ícono de menú hamburguesa -->
+        </button>
+            <ul class="menu-items" id="menu-items">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#preguntas-frecuentes">FAQs</a></li>
+                <li><a href="#descargas">Descargables</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Otras secciones -->
-    <section id="inicio">
+<section id="inicio">
         <h2>Reconoce tu esencia y camina hacia tu propósito</h2>
         <p>Acompaño a quienes se sienten perdidos a reconectar con su esencia y liberar bloqueos emocionales. Los guío en el despertar de su fuerza interior, para que puedan vivir con seguridad y confianza, renovándose como su mejor yo cada día.</p>
-    </section>
+</section>
 
-    <section id="nosotros">
+<section id="nosotros">
 
     <div class="video-container">
 
                 <!-- Video 3 -->
-            <video class="video-item" controls>
+            <video class="video-item" controls loading="lazy">
                 <source src="videos/Que es la hipnosis.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
 
             <!-- Video 2 -->
-            <video class="video-item" controls>
+            <video class="video-item" controls loading="lazy">
                 <source src="videos/estancado.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
 
             <!-- Video 1 -->
-            <video class="video-item" controls>
+            <video class="video-item" controls loading="lazy">
                 <source src="videos/soltar.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
 
     </div>
+</section>
 
-    </section>
-
+     <!-- Enlace de "Volver al inicio" -->
+    <a href="#banner" class="volver-inicio">Volver al inicio</a>
    
 <!-- Sección de Servicios -->
 <section id="servicios">
-     <!-- Enlace de "Volver al inicio" -->
-    <a href="#banner" class="volver-inicio">Volver al inicio</a>
+
     <h2>Servicios Destacados</h2>
     <h3>"Para cada obstáculo, una hipnosis que libera."</h3>
     <div class="carrusel">
@@ -100,10 +105,12 @@
     </div>
 </section>
 
+
+
+<section id="testimonios">
         <!-- Enlace de "Volver al inicio" -->
     <a href="#banner" class="volver-inicio">Volver al inicio</a>
 
-<section id="testimonios">
     <h2>Lo Que Dicen Nuestros Clientes</h2>
     <blockquote>
         "La hipnosis me ayudó a superar mis miedos. ¡Fue una experiencia transformadora!"
@@ -160,11 +167,47 @@
             <p>La hipnosis en línea es posible y, de hecho, es tan efectiva como una sesión presencial en muchos casos. Durante una sesión en línea, el hipnoterapeuta te guiará a través de un video o llamada de audio, y la experiencia es muy similar a la presencial. Solo necesitas un espacio tranquilo y una conexión estable. La mayoría de las personas se adaptan bien a este formato y logran resultados exitosos desde la comodidad de su hogar.</p>
         </details>
     </div>    
-
 </section>
 
-        <!-- Enlace de "Volver al inicio" -->
-    <a href="#banner" class="volver-inicio">Volver al inicio</a>
+    <!-- Enlace de "Volver al inicio" -->
+<a href="#banner" class="volver-inicio">Volver al inicio</a>
+
+<!-- Sección de Descargas -->
+<section id="descargas">
+    
+    <h2>Recursos Descargables</h2>
+    <p>Aquí encontrarás guías, ejercicios y otros materiales que te ayudarán en tu proceso de transformación personal.</p>
+    
+    <div class="recursos-container">
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>Afirmaciones en 7 Días</h3>
+                <p>Un calendario de afirmaciones diseñado para inspirarte, liberar bloqueos y fortalecer tu paz interior en solo 7 días.</p>
+                <a href="archivos/guia-introduccion-hipnosis.pdf" download class="boton-descarga">Descargar</a>
+            </div>
+        </div>
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>Ejercicios para Superar el Estrés</h3>
+                <p>Ejercicios prácticos que puedes implementar hoy mismo para reducir el estrés.</p>
+                <a href="archivos/ejercicios-superar-estres.pdf" download class="boton-descarga">Descargar</a>
+            </div>
+        </div>
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>Hoja de Trabajo: Liberación Emocional</h3>
+                <p>Una hoja de trabajo para identificar y liberar bloqueos emocionales.</p>
+                <a href="archivos/hoja-trabajo-liberacion-emocional.pdf" download class="boton-descarga">Descargar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Enlace de "Volver al inicio" -->
+<a href="#banner" class="volver-inicio">Volver al inicio</a>
 
 <!-- Sección de Contacto -->
 <section id="contacto">
@@ -198,5 +241,14 @@
     // Inicializar mostrando la primera diapositiva
     document.querySelectorAll('.slide')[index].classList.add('active');
 </script>
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuItems = document.getElementById('menu-items');
+
+    menuToggle.addEventListener('click', () => {
+        menuItems.classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>
