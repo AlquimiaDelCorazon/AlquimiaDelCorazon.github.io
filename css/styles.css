@@ -7,7 +7,40 @@
 
 /* Ajuste para desplazar el contenido cuando el footer está fijo */
 body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     padding-bottom: 15px; /* Altura aproximada del footer */
+}
+
+/* Títulos principales (por ejemplo, h1, h2) con la fuente secundaria */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700; /* Ajusta el grosor de los títulos */
+    color: #2c3e50; /* Color de los títulos */
+}
+
+/* Subtítulos o títulos de sección (por ejemplo, h4, h5) */
+h4, h5 {
+    font-family: 'Merriweather', serif;
+    font-weight: 500; /* Menos peso para los subtítulos */
+    color: #7f8c8d; /* Color más suave para los subtítulos */
+}
+/* Párrafos y texto normal */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #555; /* Color más suave para el texto general */
+}
+
+/* Estilo para enlaces */
+a {
+    color: #2980b9;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Banner */
@@ -310,7 +343,7 @@ section:target + .menu ul li a[href*="#inicio"],
 
 /* Estilos generales de la sección de contacto */
 #contacto {
-    background-color: #f9f9f9; /* Fondo claro */
+    
     padding: 30px;
     border-radius: 8px;
     text-align: center;
@@ -518,5 +551,4 @@ section {
     justify-content: center;
     gap: 100px; /* Espacio entre los iconos */
 }
-
 }
