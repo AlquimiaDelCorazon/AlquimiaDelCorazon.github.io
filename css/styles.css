@@ -370,20 +370,20 @@ section:target + .menu ul li a[href*="#inicio"],
 .iconos-contacto {
     display: flex;
     justify-content: center;
-    gap: 200px; /* Espacio entre los iconos */
+    gap: 20px; /* Espacio entre los iconos */
 }
 
 /* Estilos para los enlaces de iconos */
 .icono {
     color: #4a90e2; /* Color de texto de los iconos */
-    font-size: 1.5em; /* Tamaño del icono */
+    font-size: 2em; /* Tamaño del icono */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 /* Efecto hover para los iconos */
 .icono:hover {
-    color: #ffd700; /* Cambiar color al pasar el mouse */
+    color: #A41DAA; /* Cambiar color al pasar el mouse */
 }
 
 .icono-img {
@@ -399,6 +399,36 @@ section:target + .menu ul li a[href*="#inicio"],
     color: #4a90e2; /* Color del texto */
     font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
 }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición desde abajo */
+    right: 20px; /* Ajusta la posición desde la izquierda */
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20B354;
+}
+
+.whatsapp-float i {
+    color: white;
+    font-size: 50px;
+    align-items: baseline;
+    justify-content: center;
+}
+
 
 /* Footer */
 .footer {
@@ -479,6 +509,9 @@ section {
 
 
 /* Responsive */
+
+
+
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
     .banner {
@@ -491,7 +524,6 @@ section {
         font-size: 5vw; /* Ajusta el tamaño del subtítulo */
     }
 }
-
 /* Estilos para pantallas grandes */
 @media (min-width: 768px) {
         .image-grid {
@@ -563,4 +595,5 @@ section {
     justify-content: center;
     gap: 100px; /* Espacio entre los iconos */
 }
+
 }
