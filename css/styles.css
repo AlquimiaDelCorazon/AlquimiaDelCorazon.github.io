@@ -55,6 +55,36 @@ a:hover {
     align-items: flex-end;
 }
 
+/* Estilo para la información */
+.hero-info {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la parte derecha */
+    text-align: left;
+    color: white; /* Cambia el color si el fondo lo requiere */
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+/* Estilo para el enlace */
+.hero-info a, p {
+    text-decoration: none;
+    color: white; /* Asegura que el texto sea visible */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre ícono y texto */
+    font-size: 14px;
+}
+
+/* Estilo para el ícono de WhatsApp */
+.hero-info i {
+    font-size: 16px; /* Tamaño del ícono */
+    color: #25D366; /* Color oficial de WhatsApp */
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -409,7 +439,7 @@ section:target + .menu ul li a[href*="#inicio"],
     width: 60px;
     height: 60px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -424,23 +454,19 @@ section:target + .menu ul li a[href*="#inicio"],
 
 .whatsapp-float i {
     color: white;
-    font-size: 50px;
-    align-items: baseline;
-    justify-content: center;
+    font-size: 30px;
 }
 
-
 /* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
+/* Estilos del footer */
+footer {
     position: fixed;
-    width: 100%;
     bottom: 0;
-    left: 0;
-    font-size: 0.9em;
+    width: 100%;
+    background: linear-gradient(90deg, #A45157, #306C8B);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
 /* Otras secciones */
