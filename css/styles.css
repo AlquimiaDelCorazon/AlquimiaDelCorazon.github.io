@@ -220,11 +220,17 @@ section:target + .menu ul li a[href*="#inicio"],
             transition: transform 0.5s ease; /* Transición suave al cambiar de diapositiva */
         }
 
+                /* Estilo para las diapositivas */
+        .slides p{
+            text-align: center;
+        }
+
         .slide {
             min-width: 100%; /* Cada diapositiva ocupa el 100% del ancho del contenedor */
             box-sizing: border-box; /* Incluir el padding y el border en el ancho */
             padding: 20px; /* Espaciado interno */
             display: none; /* Ocultar las diapositivas por defecto */
+
         }
 
         /* Estilo para la diapositiva activa */
@@ -355,6 +361,33 @@ section:target + .menu ul li a[href*="#inicio"],
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
+
+/* Estilo para ocultar las viñetas predeterminadas y agregar un degradado */
+.faq-item ul {
+    margin: 10px 0;
+    padding-left: 20px; /* Espaciado de las viñetas desde el borde */
+    list-style-type: none; /* Oculta las viñetas predeterminadas */
+}
+
+.faq-item ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    position: relative; /* Necesario para posicionar las viñetas personalizadas */
+    padding-left: 25px; /* Espacio para la viñeta personalizada */
+}
+
+/* Viñetas personalizadas con degradado */
+.faq-item ul li::before {
+    content: ''; /* Genera un elemento vacío como viñeta */
+    position: absolute;
+    left: 0;
+    top: 10px; /* Ajusta la posición vertical de la viñeta */
+    width: 10px; /* Tamaño de la viñeta */
+    height: 10px;
+    border-radius: 50%; /* Hace que la viñeta sea redonda */
+    background: linear-gradient(45deg, #A45157, #306C8B); /* Degradado de colores */
+}
+
 
 /* Estilos para el enlace de "Volver al inicio" */
 .volver-inicio {
