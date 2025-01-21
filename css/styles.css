@@ -394,6 +394,7 @@ section:target + .menu ul li a[href*="#inicio"],
     margin-bottom: 20px;
     font-size: 1.5em;
     font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
+    text-align: center;
 }
 
 /* Contenedor para los iconos de contacto */
@@ -536,7 +537,18 @@ section {
 
 /* Responsive */
 
+/* Media Query para dispositivos con un ancho de 480px (teléfonos móviles en modo vertical) */
+@media screen and (max-width: 480px) {
+    .video-item {
+        flex: 1 1 90%; /* Los videos ocupan el 90% del ancho */
+        max-width: 250px; /* Máximo ancho para cada video */
+    }
 
+            #servicios {
+        width: 90%;
+        margin-top: 1050px; /* Aumenta este valor para más separación */
+    }
+}
 
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
@@ -594,14 +606,14 @@ section {
 
 
     .video-item {
-        flex: 1 1 100%; /* En dispositivos pequeños, cada video ocupa el 100% */
-        max-width: 90%; /* Asegura que no exceda el ancho del dispositivo */
+        flex: 1 1 45%; /* En dispositivos pequeños, cada video ocupa el 100% */
+        max-width: 350px; /* Asegura que no exceda el ancho del dispositivo */
         height: auto; /* Elimina la altura fija para que se ajuste al contenido */
     }
   
         #servicios {
         width: 90%;
-        margin-top: 1850px; /* Aumenta este valor para más separación */
+        margin-top: 1550px; /* Aumenta este valor para más separación */
     }
 
             .carrusel {
@@ -623,3 +635,4 @@ section {
 }
 
 }
+
