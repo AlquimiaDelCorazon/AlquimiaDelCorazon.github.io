@@ -385,7 +385,7 @@ section:target + .menu ul li a[href*="#inicio"],
     width: 10px; /* Tamaño de la viñeta */
     height: 10px;
     border-radius: 50%; /* Hace que la viñeta sea redonda */
-    background: linear-gradient(45deg, #A45157, #306C8B); /* Degradado de colores */
+    background: linear-gradient(45deg, #A54F54, #203C54); /* Degradado de colores */
 }
 
 
@@ -451,7 +451,11 @@ section:target + .menu ul li a[href*="#inicio"],
 
 /* Efecto hover para los iconos */
 .icono:hover {
-    color: #A41DAA; /* Cambiar color al pasar el mouse */
+    color: transparent; /* Elimina el color sólido */
+    background: linear-gradient(90deg, #A54F54, #203C54); /* Degradado */
+    -webkit-background-clip: text; /* Clip al texto para mostrar el degradado */
+    background-clip: text;
+    transition: all 0.3s ease; /* Suaviza la transición */
 }
 
 .icono-img {
@@ -501,7 +505,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: linear-gradient(90deg, #A45157, #306C8B);
+    background: linear-gradient(90deg, #201E2C, #A54F54, #201E2C);
     color: white;
     text-align: center;
     padding: 10px 0;
