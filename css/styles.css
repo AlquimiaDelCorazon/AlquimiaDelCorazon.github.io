@@ -373,7 +373,10 @@ section:target + .menu ul li a[href*="#inicio"],
 
 /* Estilos generales de la sección de contacto */
 #contacto {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     border-radius: 8px;
     text-align: center;
@@ -395,6 +398,7 @@ section:target + .menu ul li a[href*="#inicio"],
     font-size: 1.5em;
     font-family: 'Open Sans', sans-serif; /* Cambia la fuente si lo deseas */
     text-align: center;
+    margin-left: 100px;
 }
 
 /* Contenedor para los iconos de contacto */
@@ -534,7 +538,6 @@ section {
 }
 
 
-
 /* Responsive */
 
 /* Media Query para dispositivos con un ancho de 480px (teléfonos móviles en modo vertical) */
@@ -544,9 +547,15 @@ section {
         max-width: 250px; /* Máximo ancho para cada video */
     }
 
-            #servicios {
+    #servicios {
         width: 90%;
         margin-top: 1050px; /* Aumenta este valor para más separación */
+    }
+
+    /* Estilo para el texto de introducción */
+    #contacto p {
+        text-align: center;
+        margin-left: 0px;
     }
 }
 
@@ -561,11 +570,21 @@ section {
     .banner h2 {
         font-size: 5vw; /* Ajusta el tamaño del subtítulo */
     }
+        /* Estilo para el texto de introducción */
+    #contacto p {
+        text-align: center;
+        margin-left: 0px;
+    }
 }
 /* Estilos para pantallas grandes */
 @media (min-width: 768px) {
         .image-grid {
         grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    }
+        /* Estilo para el texto de introducción */
+    #contacto p {
+        text-align: center;
+        margin-left: 0px;
     }
 
 }
@@ -616,23 +635,23 @@ section {
         margin-top: 1550px; /* Aumenta este valor para más separación */
     }
 
-            .carrusel {
-            max-width: 100%; /* Ancho máximo del carrusel */
-            margin-top: 20px;
-            overflow: hidden; /* Ocultar contenido que se sale del área */
-        }
-    .icono-img {
-    width: 32px; /* Ajusta el tamaño según sea necesario */
-    height: 32px; /* Ajusta el tamaño según sea necesario */
-    vertical-align: middle; /* Alinear el icono con el texto */
-    margin-right: 5px; /* Espacio entre el icono y el texto */
-}
+        .carrusel {
+        max-width: 100%; /* Ancho máximo del carrusel */
+        margin-top: 20px;
+        overflow: hidden; /* Ocultar contenido que se sale del área */
+    }
+        .icono-img {
+        width: 32px; /* Ajusta el tamaño según sea necesario */
+        height: 32px; /* Ajusta el tamaño según sea necesario */
+        vertical-align: middle; /* Alinear el icono con el texto */
+        margin-right: 5px; /* Espacio entre el icono y el texto */
+    }
 
-.iconos-contacto {
-    display: flex;
-    justify-content: center;
-    gap: 100px; /* Espacio entre los iconos */
-}
+        .iconos-contacto {
+        display: flex;
+        justify-content: center;
+        gap: 100px; /* Espacio entre los iconos */
+    }
 
 }
 
