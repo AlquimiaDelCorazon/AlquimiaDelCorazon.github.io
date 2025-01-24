@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Hipnosis, meditaciones guiadas">
     <meta name="description" content="Descubre herramientas para tu bienestar emocional y desarrollo personal a través de la Alquimia del Corazón.">
     <meta name="robots" content="index, follow">
@@ -19,29 +20,29 @@
     <meta name="twitter:title" content="Alquimia del Corazón - Transformación Interior">
     <meta name="twitter:description" content="Herramientas para tu bienestar emocional y desarrollo personal.">
     <meta name="twitter:image" content="img/Alquimia del Corazón.png">
-
+    
     <title>Alquimia del Corazón - Transformación Interior</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/Alquimia del Corazón.png" type="image/png">
 </head>
 <body>
-    <!-- Sección de banner -->
-    <header class="banner" id="banner">
-
-        <div class="hero-info">
-            <p>Bogotá - Colombia</p>
-            <a href="https://wa.me/573504799933" target="_blank">
-            <i class="fab fa-whatsapp"></i> 3504799933
-            </a>
-        </div>
-        <nav class="menu">
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
-            &#9776; <!-- Ícono de menú hamburguesa -->
-        </button>
-            <ul class="menu-items" id="menu-items">
-                <li><a href="#inicio">Inicio</a></li>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="hero-info">
+                    <p>Bogotá - Colombia</p>
+                    <a href="https://wa.me/573504799933" target="_blank">
+                    <i class="fab fa-whatsapp"></i> 3504799933</a>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#banner">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#preguntas-frecuentes">FAQs</a></li>
@@ -49,76 +50,81 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+        <div id=banner class="banner">
+            <video autoplay muted loop class="banner-video">
+                <source src="videos/banner.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+            <div class="banner-text">
+                <h1>Alquimia<br>Del Corazón</h1>
+                <h3>Dondé cada latido cuanta una historia</h3>
+            </div>
+
+        </div>
     </header>
 
-    <!-- Otras secciones -->
-<section id="inicio">
+    <section id="videos" class="video-section">
+    <div class="video-header">
         <h2>Reconoce tu esencia y camina hacia tu propósito</h2>
         <p>Acompaño a quienes se sienten perdidos a reconectar con su esencia y liberar bloqueos emocionales. Los guío en el despertar de su fuerza interior, para que puedan vivir con seguridad y confianza, renovándose como su mejor yo cada día.</p>
-</section>
-
-<section id="nosotros">
-
+    </div>
     <div class="video-container">
-
-                <!-- Video 3 -->
-            <video class="video-item" controls preload="metadata">
-                <source src="videos/Que es la hipnosis.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
+        <div class="video-item">
+            <video controls>
+                <source src="videos/video3.mp4" type="video/mp4">
+                Tu navegador no soporta video.
             </video>
-
-            <!-- Video 2 -->
-            <video class="video-item" controls preload="metadata">
-                <source src="videos/estancado.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="videos/video2.mp4" type="video/mp4">
+                Tu navegador no soporta video.
             </video>
-
-            <!-- Video 1 -->
-            <video class="video-item" controls preload="metadata">
-                <source src="videos/soltar.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+                Tu navegador no soporta video.
             </video>
-
+        </div>
     </div>
 </section>
-   
+
 <!-- Sección de Servicios -->
 <section id="servicios">
-     <!-- Enlace de "Volver al inicio" -->
-    <a href="#banner" class="volver-inicio">Volver al inicio</a>
 
-    <h2>Servicios Destacados</h2>
-    <h3>"Para cada obstáculo, una hipnosis que libera."</h3>
+    <h1>Servicios Destacados</h1>
+    <h2>"Para cada obstáculo, una hipnosis que libera."</h2>
     <div class="carrusel">
         <button class="prev" onclick="cambiarSlide(-1)">&#10094;</button>
         
         <div class="slides">
             <div class="slide active">
-                <h3>Superación de Miedos y Fobias</h3> <br>
+                <h2>Superación de Miedos y Fobias</h2> <br>
                 <h5>La hipnosis permite a los clientes enfrentarse a sus miedos <br> en un entorno controlado y seguro, ayudándoles a desensibilizarse.</h5>
             </div>
             <div class="slide">
-                <h3>Dejar de Fumar</h3><br>
+                <h2>Dejar de Fumar</h2><br>
                 <h5>Deja atrás el hábito de fumar de manera efectiva y duradera, <br>reprogramando tu mente para vivir una vida más saludable y libre de adicciones.</h5>
             </div>
             <div class="slide">
-                <h3>Mejora de la Autoestima</h3><br>
+                <h2>Mejora de la Autoestima</h2><br>
                 <h5>Aumenta tu confianza y mejora tu autoimagen con sesiones de hipnosis <br> diseñadas para superar creencias limitantes y cultivar una autoestima positiva.</h5>
             </div>
             <div class="slide">
-                <h3>Control de Peso</h3><br>
+                <h2>Control de Peso</h2><br>
                 <h5>Sesiones enfocadas en la alimentación consciente y <br> la motivación para mantener un peso saludable</h5>
             </div>
             <div class="slide">
-                <h3>Hipnosis para Relajación y Estrés</h3><br>
-                <h5>Ayuda a los clientes a reprogramar sus respuestas emocionales y <br> a lidiar con la ansiedad y el estres de manera más efectiva.</h5>
+                <h2>Hipnosis para Relajación y Estrés</h2><br>
+                <h5>Ayuda a los clientes a reprogramar sus respuestas emocionales y <br> a lidiar con la ansiedad y el estrés de manera más efectiva.</h5>
             </div>
             <div class="slide">
-                <h3>Terapia de Regresión</h3><br>
+                <h2>Terapia de Regresión</h2><br>
                 <h5>Explora y transforma experiencias pasadas a través de la terapia de regresión, <br> permitiendo que sanes y encuentres claridad en tu vida actual.</h5>
             </div>
             <div class="slide">
-                <h3>Hipnosis para Trastornos Psicosomáticos</h3><br>
+                <h2>Hipnosis para Trastornos Psicosomáticos</h2><br>
                 <h5>Aborda los síntomas físicos que tienen raíces emocionales mediante la hipnosis, <br> promoviendo un bienestar integral y un alivio duradero.</h5>
             </div>
         </div>
@@ -127,26 +133,21 @@
     </div>
 </section>
 
-
-
+<!-- Sección de Testimonios -->
 <section id="testimonios">
-        <!-- Enlace de "Volver al inicio" -->
-    <a href="#banner" class="volver-inicio">Volver al inicio</a>
 
     <h2>Lo Que Dicen Nuestros Clientes</h2>
-    <blockquote>
-        "La hipnosis me ayudó a superar mis miedos. ¡Fue una experiencia transformadora!"
-    </blockquote>
-    <blockquote>
-        "Después de las sesiones, finalmente puedo dormir bien. ¡Recomiendo mucho este servicio!"
-    </blockquote>
-
+    <div class="testimonios-contenedor">
+        <blockquote>
+            "La hipnosis me ayudó a superar mis miedos. ¡Fue una experiencia transformadora!"
+        </blockquote>
+        <blockquote>
+            "Después de las sesiones, finalmente puedo dormir bien. ¡Recomiendo mucho este servicio!"
+        </blockquote>
+    </div>
 </section>
 
 <section id="preguntas-frecuentes">
-
-    <!-- Enlace de "Volver al inicio" -->
-<a href="#banner" class="volver-inicio">Volver al inicio</a>
 
     <h2>Preguntas Frecuentes</h2>
 
@@ -184,54 +185,52 @@
             <p>Sí, la hipnosis puede funcionar incluso si eres escéptico. La clave es estar dispuesto a participar en el proceso y estar abierto a la experiencia. La efectividad de la hipnosis no depende de la creencia en ella, sino en la disposición de tu mente a concentrarse y relajarse. Si eres escéptico, puede que te lleve un poco más de tiempo acostumbrarte al proceso, pero muchas personas han tenido resultados exitosos a pesar de ser inicialmente escépticas.</p>
         </details>
     </div>
+
     <div class="faq-item">
         <details>
             <summary>¿Puedo hacer hipnosis en línea o necesita ser presencial?</summary>
             <p>La hipnosis en línea es posible y, de hecho, es tan efectiva como una sesión presencial en muchos casos. Durante una sesión en línea, el hipnoterapeuta te guiará a través de un video o llamada de audio, y la experiencia es muy similar a la presencial. Solo necesitas un espacio tranquilo y una conexión estable. La mayoría de las personas se adaptan bien a este formato y logran resultados exitosos desde la comodidad de su hogar.</p>
         </details>
     </div>
-<div class="faq-item">
-    <details>
-        <summary>¿Cómo funciona mi servicio?</summary>
-        <p>Mi servicio está diseñado para guiarte hacia la solución de aquello que te detiene, de una forma ética, clara y efectiva. A continuación, te explico cómo funciona:</p>
-        <ul>
-            <li><strong>Cuestionario previo:</strong> Antes de iniciar, realizaremos algunas preguntas para entender a profundidad tu situación, determinar el impacto que tiene en tu vida y clarificar lo que deseas trabajar. También exploraremos cómo esperas que resolver este problema transforme tu vida.</li>
-            <li><strong>Primera sesión de hipnosis:</strong> Durante esta sesión inicial, nos enfocaremos en conectar con el origen del problema y resolverlo a través de la hipnosis. Si no logramos acceder al problema en esta sesión, programaremos una segunda sesión en un plazo de 15 días.</li>
-            <li>En caso de no lograr conectar con el problema en esta segunda sesión, se te reembolsará el dinero, ya que esto significaría que no soy la terapeuta adecuada para ti.</li>
-            <li><strong>Hipnosis personalizada de manifestación:</strong> Una vez hayamos identificado y trabajado con éxito en la raíz del problema, diseñaré una hipnosis personalizada de manifestación para potenciar los resultados. Esta grabación será enviada 3 días después de la sesión y deberás escucharla diariamente durante 30 días.</li>
-            <li><strong>Evaluación final:</strong> Al concluir el periodo de 30 días, realizaremos una evaluación para medir el avance en el área trabajada y consolidar los cambios obtenidos.</li>
-            <li><strong>Costo del servicio:</strong> El costo total de este proceso es de 150,000 pesos colombianos.</li>
-        </ul>
-        <p>Este enfoque te garantiza un acompañamiento personalizado y comprometido con tu bienestar. ¡Estoy aquí para apoyarte en este proceso de transformación!</p>
-    </details>
-</div>   
+
+    <div class="faq-item">
+        <details>
+            <summary>¿Cómo funciona mi servicio?</summary>
+            <p>Mi servicio está diseñado para guiarte hacia la solución de aquello que te detiene, de una forma ética, clara y efectiva. A continuación, te explico cómo funciona:</p>
+            <ul>
+                <li><strong>Cuestionario previo:</strong> Antes de iniciar, realizaremos algunas preguntas para entender a profundidad tu situación, determinar el impacto que tiene en tu vida y clarificar lo que deseas trabajar. También exploraremos cómo esperas que resolver este problema transforme tu vida.</li>
+                <li><strong>Primera sesión de hipnosis:</strong> Durante esta sesión inicial, nos enfocaremos en conectar con el origen del problema y resolverlo a través de la hipnosis. Si no logramos acceder al problema en esta sesión, programaremos una segunda sesión en un plazo de 15 días.</li>
+                <li>En caso de no lograr conectar con el problema en esta segunda sesión, se te reembolsará el dinero, ya que esto significaría que no soy la terapeuta adecuada para ti.</li>
+                <li><strong>Hipnosis personalizada de manifestación:</strong> Una vez hayamos identificado y trabajado con éxito en la raíz del problema, diseñaré una hipnosis personalizada de manifestación para potenciar los resultados. Esta grabación será enviada 3 días después de la sesión y deberás escucharla diariamente durante 30 días.</li>
+                <li><strong>Evaluación final:</strong> Al concluir el periodo de 30 días, realizaremos una evaluación para medir el avance en el área trabajada y consolidar los cambios obtenidos.</li>
+                <li><strong>Costo del servicio:</strong> El costo total de este proceso es de 150,000 pesos colombianos.</li>
+            </ul>
+            <p>Este enfoque te garantiza un acompañamiento personalizado y comprometido con tu bienestar. ¡Estoy aquí para apoyarte en este proceso de transformación!</p>
+        </details>
+    </div>
 </section>
 
 <!-- Sección de Descargas -->
 <section id="descargas">
 
-    <!-- Enlace de "Volver al inicio" -->
-<a href="#banner" class="volver-inicio">Volver al inicio</a>
-    
     <h2>Recursos Descargables</h2>
-    <p>Aquí encontrarás guías, ejercicios y otros materiales que te ayudarán en tu proceso de transformación personal.</p>
-    
+    <h3>Aquí encontrarás guías, ejercicios y otros materiales que te ayudarán en tu proceso de transformación personal.</h3>
+
     <div class="recursos-container">
         <div class="recurso">
             <img src="img/download-pdf.png" alt="Ícono PDF">
             <div class="recurso-info">
                 <h3>Afirmaciones en 7 Días</h3>
                 <p>Un calendario de afirmaciones diseñado para inspirarte, liberar bloqueos y fortalecer tu paz interior en solo 7 días.</p>
-                <a href="archivos/Afirmaciones7días.pdf" 
-                download class="boton-descarga">Descargar</a>
+                <a href="archivos/Afirmaciones7días.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
             </div>
         </div>
         <div class="recurso">
             <img src="img/download-pdf.png" alt="Ícono PDF">
             <div class="recurso-info">
-                <h3>Ejercicios para Superar el Estrés</h3>
-                <p>Ejercicios prácticos que puedes implementar hoy mismo para reducir el estrés.</p>
-                <a href="archivos/ejercicios-superar-estres.pdf" download class="boton-descarga">Descargar</a>
+                <h3>Ejercicios para Una Meditación Efectiva</h3>
+                <p>Ejercicios prácticos que puedes implementar hoy mismo para aprender a meditar.</p>
+                <a href="archivos/GuiaMeditacion.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
             </div>
         </div>
         <div class="recurso">
@@ -239,7 +238,7 @@
             <div class="recurso-info">
                 <h3>Hoja de Trabajo: Liberación Emocional</h3>
                 <p>Una hoja de trabajo para identificar y liberar bloqueos emocionales.</p>
-                <a href="archivos/hoja-trabajo-liberacion-emocional.pdf" download class="boton-descarga">Descargar</a>
+                <a href="archivos/Emociones.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
             </div>
         </div>
     </div>
@@ -247,23 +246,19 @@
 
 <!-- Sección de Contacto -->
 <section id="contacto">
-
-    <!-- Enlace de "Volver al inicio" -->
-<a href="#banner" class="volver-inicio">Volver al inicio</a>
-
     <p>¡Nos encantaría saber de ti! Contáctanos a través de las siguientes plataformas:</p>
 
-<div class="iconos-contacto">
-    <a href="https://web.facebook.com/profile.php?id=61563004241909" target="_blank" class="icono">
-         <i class="fa-brands fa-facebook"></i>
-    </a>
-    <a href="https://wa.me/573504799933" target="_blank" class="icono">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <div class="iconos-contacto">
+        <a href="https://web.facebook.com/profile.php?id=61563004241909" target="_blank" class="icono">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/573504799933" target="_blank" class="icono">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
         <a href="https://www.instagram.com/alquimia.del.corazon85/" target="_blank" class="icono">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-</div>
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </div>
 </section>
 
 <div class="whatsapp-float">
@@ -272,10 +267,11 @@
     </a>
 </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Derechos reservados | Alquimia Del Corazon
-    </footer>
+<!-- Footer -->
+<footer>
+    &copy; 2024 Derechos reservados | Alquimia Del Corazon
+</footer>
+
 <script>
     let index = 0;
 
@@ -289,15 +285,15 @@
     // Inicializar mostrando la primera diapositiva
     document.querySelectorAll('.slide')[index].classList.add('active');
 </script>
-<script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menuItems = document.getElementById('menu-items');
 
-    menuToggle.addEventListener('click', () => {
-        menuItems.classList.toggle('active');
-    });
-</script>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
 
+mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
 
+    </script>
 </body>
 </html>

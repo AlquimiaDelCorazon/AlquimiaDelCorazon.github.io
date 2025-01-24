@@ -1,0 +1,673 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+h2, h3 {
+    font-family: "Apple Chancery", cursive;
+}
+
+/* Estilo del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 1rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-image: linear-gradient(90deg, #f5d76e, #f7c64f, #e6ac00);
+    color: transparent; /* Oculta el color base */
+    -webkit-background-clip: text;
+    background-clip: text; /* Muestra el degradado solo en el texto */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Estilo del banner */
+.banner {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.banner h1 {
+    font-size: 6rem;
+    font-family: "Apple Chancery", cursive; /* Estilo aplicado */
+    margin: 0;
+}
+
+.banner h3 {
+    font-size: 1.5rem;
+    font-family: "Apple Chancery", cursive; /* Estilo aplicado */
+    margin-top: 1rem;
+}
+/* Estilo para la información */
+.hero-info {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la parte derecha */
+    text-align: left;
+    color: white; /* Cambia el color si el fondo lo requiere */
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+/* Estilo para el enlace */
+.hero-info a, p {
+    text-decoration: none;
+    color: white; /* Asegura que el texto sea visible */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre ícono y texto */
+    font-size: 14px;
+}
+
+/* Estilo para el ícono de WhatsApp */
+.hero-info i {
+    font-size: 16px; /* Tamaño del ícono */
+    color: #25D366; /* Color oficial de WhatsApp */
+}
+
+/* Estilo para la sección de videos */
+.video-section {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.video-header {
+    margin-bottom: 2rem;
+}
+
+.video-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: "Apple Chancery", cursive;
+}
+
+.video-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Estilo para el contenedor de los videos */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 33%;
+    padding: 1rem;
+}
+
+video {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo para la sección de Servicios */
+#servicios {
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px; 
+}
+
+#servicios h1{
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-family: "Apple Chancery", cursive;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 40px;
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Sección de Testimonios */
+#testimonios {
+    background-color: #f0f4f8; /* Fondo claro */
+    padding: 30px;
+    margin: 30px 0; /* Separación entre secciones */
+    border-radius: 8px;
+    font-family: "Lora", serif; /* Elegante y legible */
+    color: #203C54; /* Texto en color oscuro */
+}
+
+#testimonios h2 {
+    text-align: center;
+    font-family: "Apple Chancery", cursive; /* Título con estilo cursivo */
+    font-size: 2em;
+    color: #000; /* Rojo elegante */
+    margin-bottom: 20px;
+}
+
+#testimonios .testimonios-contenedor {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centrar contenido */
+}
+
+#testimonios blockquote {
+    font-style: italic;
+    margin: 20px 0; /* Espaciado entre testimonios */
+    padding: 15px;
+    border-left: 5px solid #4a90e2; /* Línea azul a la izquierda */
+    background-color: #fff; /* Fondo blanco para los testimonios */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+}
+
+#testimonios blockquote::before {
+    content: "“"; /* Comillas de apertura */
+    font-size: 2em;
+    color: #4a90e2; /* Azul */
+    margin-right: 10px;
+    vertical-align: -0.4em;
+}
+
+#testimonios blockquote::after {
+    content: "”"; /* Comillas de cierre */
+    font-size: 2em;
+    color: #4a90e2; /* Azul */
+    margin-left: 5px;
+    vertical-align: -0.4em;
+}
+
+#testimonios blockquote p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+/* Sección de Preguntas Frecuentes */
+#preguntas-frecuentes {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f4f8; /* Color de fondo claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centrar todo el contenido */
+}
+
+#preguntas-frecuentes h2 {
+    font-size: 2em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+/* Pregunta individual (FAQ item) */
+.faq-item {
+    margin: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+}
+
+/* Estilo para el título de cada pregunta */
+.faq-item summary {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    outline: none;
+    transition: color 0.3s;
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Hacer que las preguntas se comporten como elementos en línea */
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+    position: relative;
+    list-style: none;
+}
+
+/* Icono decorativo para expandir/contraer */
+.faq-item summary::after {
+    content: "+";
+    font-weight: bold;
+    position: absolute;
+    right: 0; /* Alinea el "+" a la derecha */
+    transition: transform 0.3s;
+}
+
+/* Cambiar icono cuando está abierto */
+.faq-item details[open] summary::after {
+    transform: rotate(45deg); /* Cambiar "+" a "x" */
+}
+
+/* Cambia el color al hacer hover */
+.faq-item summary:hover {
+    color: #4a90e2;
+}
+
+/* Estilo para el texto de cada respuesta */
+.faq-item p {
+    margin: 10px auto; /* Centra las respuestas automáticamente */
+    padding: 10px;
+    font-size: 1em;
+    line-height: 1.6;
+    background-color: #f4f8fc;
+    border-radius: 5px;
+    color: #333;
+    transition: max-height 0.3s;
+    max-width: 80%; /* Limita el ancho de las respuestas */
+    text-align: center; /* Centra el texto de las respuestas */
+}
+
+/* Animación de apertura de las respuestas */
+.faq-item details {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Estilo para ocultar las viñetas predeterminadas */
+.faq-item ul {
+    margin: 10px auto;
+    padding: 0;
+    list-style-type: none; /* Oculta las viñetas predeterminadas */
+    text-align: center; /* Centra las listas */
+}
+
+.faq-item ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px; /* Espacio para la viñeta personalizada */
+    display: inline-block; /* Centra los elementos de la lista */
+    text-align: center; /* Asegura que el texto de cada ítem esté centrado */
+}
+
+/* Viñetas personalizadas con degradado */
+.faq-item ul li::before {
+    content: ''; /* Genera un elemento vacío como viñeta */
+    position: absolute;
+    left: 0;
+    top: 50%; /* Centra verticalmente la viñeta */
+    transform: translateY(-50%);
+    width: 10px; /* Tamaño de la viñeta */
+    height: 10px;
+    border-radius: 50%; /* Hace que la viñeta sea redonda */
+    background: linear-gradient(45deg, #A54F54, #203C54); /* Degradado de colores */
+}
+
+
+/* Sección de Descargas */
+#descargas {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 40px 20px; /* Espaciado interno */
+    background-color: #f0f4f8;
+    border-top: 4px solid #4a90e2; /* Línea decorativa */
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: none; /* Sin sombra */
+}
+
+#descargas h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+#descargas h3 {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.recursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+/* Estilo de cada recurso */
+.recurso {
+    flex: 1 1 calc(25% - 20px); /* Cuatro recursos por fila en pantallas grandes */
+    max-width: 300px; /* Limita el tamaño máximo de cada recurso */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+
+.recurso:hover {
+    transform: translateY(-5px);
+}
+
+.recurso img {
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+.recurso h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.recurso p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.boton-descarga {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.boton-descarga:hover {
+    background-color: #357abd;
+}
+
+/* Estilos generales de la sección de contacto */
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fondo claro */
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Estilo para el texto de introducción */
+#contacto p {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Contenedor para los iconos de contacto */
+.iconos-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre los iconos */
+    flex-wrap: wrap; /* Permitir que los iconos se ajusten en pantallas pequeñas */
+}
+
+/* Estilos para los enlaces de iconos */
+.icono {
+    color: #4a90e2; /* Azul claro para los iconos */
+    font-size: 3rem; /* Tamaño de los iconos */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover para los iconos */
+.icono:hover {
+    color: transparent;
+    background: linear-gradient(90deg, #A54F54, #203C54); /* Degradado */
+    -webkit-background-clip: text; /* Clip al texto para mostrar el degradado */
+    background-clip: text;
+    transform: scale(1.1); /* Ampliar un poco el tamaño */
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición desde abajo */
+    right: 20px; /* Ajusta la posición desde la izquierda */
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20B354;
+}
+
+.whatsapp-float i {
+    color: white;
+    font-size: 30px;
+}
+
+/* Estilos del footer */
+footer {
+    position: relative; /* Cambiado de fixed a relative para evitar que el footer cubra contenido */
+    width: 100%;
+    background: linear-gradient(90deg, #201E2C, #A54F54, #201E2C); /* Degradado elegante */
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Espaciado superior e inferior */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem; /* Tamaño de texto ajustado */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para darle profundidad */
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .banner h1 {
+    font-size: 2.5rem;
+
+}
+
+.banner h3 {
+    font-size: 1rem;
+}
+.video-item {
+        max-width: 100%;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-header h2 {
+        font-size: 2rem;
+    }
+
+    .video-header p {
+        font-size: 1rem;
+    }
+
+    .recurso {
+        flex: 1 1 100%; /* Un recurso por fila */
+    }
+
+    #descargas h2 {
+        font-size: 1.5em;
+    }
+
+    #descargas p {
+        font-size: 1em;
+    }
+
+    .recursos-container {
+        gap: 15px; /* Reduce el espacio entre los recursos */
+    }
+
+    .boton-descarga {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+        #contacto p {
+        font-size: 1.2rem; /* Reducir el tamaño del texto */
+    }
+
+    .icono {
+        font-size: 2.5rem; /* Reducir el tamaño de los iconos */
+    }
+        footer {
+        font-size: 0.8rem; /* Ajustar el texto para dispositivos más pequeños */
+        padding: 10px 0; /* Reducir el espacio para mayor compatibilidad */
+    }
+}
+
+@media (max-width: 480px) {
+    .icono {
+        font-size: 2rem; /* Ajustar los iconos para pantallas pequeñas */
+    }
+}
+
