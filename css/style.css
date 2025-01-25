@@ -541,6 +541,54 @@ button:hover {
     transform: scale(1.1); /* Ampliar un poco el tamaño */
 }
 
+/* Estilo para los botones de compartir */
+.boton-compartir {
+    background-color: #25D366; /* Color de WhatsApp */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Hover para el botón de WhatsApp */
+.boton-compartir:hover {
+   /* Color más oscuro para WhatsApp */
+    color: transparent;
+    background: radial-gradient(circle, #1E8E3E, #2D9B3A); /* Degradado */
+    -webkit-background-clip: text; /* Clip al texto para mostrar el degradado */
+    background-clip: text;
+    transform: scale(1.1); /* Ampliar un poco el tamaño */
+}
+
+/* Estilo adicional para los botones de compartir en Facebook */
+.boton-compartir-fb {
+    background-color: #4a90e2;  /* Color de Facebook */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Hover para el botón de Facebook */
+.boton-compartir-fb:hover {
+   /* Color más oscuro para Facebook */
+    color: transparent;
+    background: radial-gradient(circle, #1E75C7, #006F8E); /* Degradado */
+    -webkit-background-clip: text; /* Clip al texto para mostrar el degradado */
+    background-clip: text;
+    transform: scale(1.1); /* Ampliar un poco el tamaño */
+}
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px; /* Ajusta la posición desde abajo */
