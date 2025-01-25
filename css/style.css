@@ -6,12 +6,12 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
     line-height: 1.6;
 }
 
 h2, h3 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
 }
 
 /* Estilo del navbar */
@@ -95,13 +95,14 @@ h2, h3 {
 
 .banner h1 {
     font-size: 6rem;
-        font-family: 'Open Sans', sans-serif; /* Fuentes alternativas */ /* Estilo aplicado */
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
+    font-style: italic; /* Aplica la versión cursiva */
     margin: 0;
 }
 
 .banner h3 {
     font-size: 1.5rem;
-        font-family: 'Open Sans', sans-serif; /* Fuentes alternativas */ /* Estilo aplicado */
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
     margin-top: 1rem;
 }
 /* Estilo para la información */
@@ -149,7 +150,7 @@ h2, h3 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
-    font-family: 'Open Sans', sans-serif; /* Fuentes alternativas */
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
 }
 
 .video-header p {
@@ -192,7 +193,7 @@ video {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
 }
 
 /* Estilos para el carrusel */
@@ -253,13 +254,13 @@ button:hover {
     padding: 30px;
     margin: 30px 0; /* Separación entre secciones */
     border-radius: 8px;
-    font-family: "Lora", serif; /* Elegante y legible */
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
     color: #203C54; /* Texto en color oscuro */
 }
 
 #testimonios h2 {
     text-align: center;
-    font-family: 'Open Sans', sans-serif; /* Fuentes alternativas */ /* Título con estilo cursivo */
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
     font-size: 2em;
     color: #000; /* Rojo elegante */
     margin-bottom: 20px;
@@ -513,7 +514,7 @@ button:hover {
     color: #333;
     margin-bottom: 30px;
     font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
 }
 
 /* Contenedor para los iconos de contacto */
