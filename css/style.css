@@ -11,7 +11,7 @@ body {
 }
 
 h2, h3 {
-    font-family: "Kaushan Script", "Lucida Calligraphy", "Brush Script MT", "Segoe Script", cursive;
+    font-family: "Book Antiqua", cursive;
 }
 
 /* Estilo del navbar */
@@ -95,13 +95,13 @@ h2, h3 {
 
 .banner h1 {
     font-size: 6rem;
-        font-family: "Kaushan Script", "Lucida Calligraphy", "Brush Script MT", "Segoe Script", cursive; /* Fuentes alternativas */ /* Estilo aplicado */
+        font-family: "Book Antiqua", cursive; /* Fuentes alternativas */ /* Estilo aplicado */
     margin: 0;
 }
 
 .banner h3 {
     font-size: 1.5rem;
-        font-family: "Kaushan Script", "Lucida Calligraphy", "Brush Script MT", "Segoe Script", cursive; /* Fuentes alternativas */ /* Estilo aplicado */
+        font-family: "Book Antiqua", cursive; /* Fuentes alternativas */ /* Estilo aplicado */
     margin-top: 1rem;
 }
 /* Estilo para la información */
@@ -149,7 +149,7 @@ h2, h3 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
-    font-family: "Kaushan Script", "Lucida Calligraphy", "Brush Script MT", "Segoe Script", cursive; /* Fuentes alternativas */
+    font-family: "Book Antiqua", cursive; /* Fuentes alternativas */
 }
 
 .video-header p {
@@ -192,7 +192,7 @@ video {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
-    font-family: "Kaushan Script", cursive;
+    font-family: "Book Antiqua", cursive;
 }
 
 /* Estilos para el carrusel */
@@ -259,7 +259,7 @@ button:hover {
 
 #testimonios h2 {
     text-align: center;
-    font-family: "Kaushan Script", "Lucida Calligraphy", "Brush Script MT", "Segoe Script", cursive; /* Fuentes alternativas */ /* Título con estilo cursivo */
+    font-family: "Book Antiqua", cursive; /* Fuentes alternativas */ /* Título con estilo cursivo */
     font-size: 2em;
     color: #000; /* Rojo elegante */
     margin-bottom: 20px;
