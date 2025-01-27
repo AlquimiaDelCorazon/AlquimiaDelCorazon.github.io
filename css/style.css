@@ -619,15 +619,37 @@ button:hover {
 
 /* Estilos del footer */
 footer {
-    position: relative; /* Cambiado de fixed a relative para evitar que el footer cubra contenido */
+    position: relative;
     width: 100%;
-    background: linear-gradient(90deg, #201E2C, #A54F54, #201E2C); /* Degradado elegante */
+    background: linear-gradient(90deg, #201E2C, #A54F54, #201E2C);
     color: white;
     text-align: center;
-    padding: 15px 0; /* Espaciado superior e inferior */
+    padding: 15px 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.9rem; /* Tamaño de texto ajustado */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para darle profundidad */
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+/* Estilos para los enlaces del footer */
+.footer-links {
+    margin-top: 10px; /* Espaciado con respecto al texto de los derechos reservados */
+}
+
+.footer-links a {
+    margin: 0 15px; /* Espaciado horizontal entre los enlaces */
+    display: inline-block; /* Asegura que estén en línea */
 }
 
 

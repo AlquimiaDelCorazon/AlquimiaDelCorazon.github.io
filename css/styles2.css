@@ -1,0 +1,277 @@
+/* Reset de estilo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Nunito', 'Lato', sans-serif; /* Opción de respaldo */
+    line-height: 1.6;
+}
+
+/* Solución para el espacio del navbar */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem; /* Ajustar espacio interno del navbar */
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0; /* Fija el menú al inicio de la página */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 1rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-image: linear-gradient(90deg, #f5d76e, #f7c64f, #e6ac00);
+    color: transparent; /* Oculta el color base */
+    -webkit-background-clip: text;
+    background-clip: text; /* Muestra el degradado solo en el texto */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Estilo para la información */
+.hero-info {
+    position: absolute;
+    top: 10px; /* Distancia desde la parte superior */
+    left: 10px; /* Distancia desde la parte derecha */
+    text-align: left;
+    color: white; /* Cambia el color si el fondo lo requiere */
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+/* Estilo para el enlace */
+.hero-info a, p {
+    text-decoration: none;
+    color: white; /* Asegura que el texto sea visible */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaciado entre ícono y texto */
+    font-size: 12px;
+}
+
+/* Estilo para el ícono de WhatsApp */
+.hero-info i {
+    font-size: 16px; /* Tamaño del ícono */
+    color: #25D366; /* Color oficial de WhatsApp */
+}
+
+/* Solución para términos y condiciones */
+.terms-container {
+    max-width: 90%;
+    margin: 80px auto 2rem auto; /* Agrega margen superior al contenedor */
+    background-color: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    padding: 20px;
+}
+
+.terms-container h2 {
+    color: #4a90e2;
+}
+.terms-container h1 {
+    background: linear-gradient(90deg, #1E90FF, #FF1493, #40E0D0); /* El degradado va de izquierda a derecha */
+    -webkit-background-clip: text; /* Para que el degradado solo afecte al texto */
+    background-clip: text;
+    color: transparent; /* Esto hace que el color del texto sea transparente para mostrar el degradado */
+    font-size: 2.5rem; /* Tamaño del título */
+    font-weight: bold; /* Estilo en negrita */
+    text-align: center; /* Centra el texto */
+    margin-bottom: 2rem; /* Espacio debajo del título */
+}
+
+.terms-container p {
+    color: #fff;
+    margin-bottom: 1rem;
+    display: inline-block;  /* Asegura que el párrafo se comporte como un bloque en línea */
+    text-align: left;       /* Alinea el texto a la izquierda */
+    font-size: 1rem; /* Tamaño del título */
+
+}
+
+/* Estilos para listas */
+.terms-container ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    text-align: left;
+    list-style-type: circle;
+}
+
+.terms-container ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    list-style: none; /* Quitar viñetas predeterminadas */
+}
+
+/* Viñetas con degradado */
+.terms-container ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #4a90e2, #a54f54, #201e2c);
+}
+/* Estilo de sublistas */
+.terms-container ul ul {
+    list-style-type: disc; /* Viñetas secundarias en forma de círculo hueco */
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+/* Opcional: Hover en los elementos de la lista */
+.terms-container li:hover {
+    color: #A54F54; /* Cambia el color del texto al pasar el mouse */
+    cursor: default;
+}
+
+section #terms, p {
+    display: block;  /* Asegura que todo el contenido se alinee verticalmente */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    margin-bottom: 0.5rem;
+    color: #4a90e2; /* Color de los subtítulos */
+}
+
+strong {
+    margin: 0;
+    padding: 0;
+    color: #fff;  /* O el color que prefieras */
+    font-size: inherit;  /* Asegura que el tamaño de fuente se herede del contenedor */
+    display: inline;
+
+}
+
+/* Estilos del footer */
+footer {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #201E2C, #A54F54, #201E2C);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #4a90e2;
+    text-decoration: underline;
+}
+
+/* Estilos para los enlaces del footer */
+.footer-links {
+    margin-top: 10px; /* Espaciado con respecto al texto de los derechos reservados */
+}
+
+.footer-links a {
+    margin: 0 15px; /* Espaciado horizontal entre los enlaces */
+    display: inline-block; /* Asegura que estén en línea */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+}
+
