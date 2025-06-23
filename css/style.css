@@ -447,23 +447,28 @@ button:hover {
 
 /* Estilo de cada recurso */
 .recurso {
-    flex: 1 1 calc(25% - 20px); /* Cuatro recursos por fila en pantallas grandes */
-    max-width: 300px; /* Limita el tamaño máximo de cada recurso */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* clave */
+    flex: 1 1 calc(25% - 20px);
+    max-width: 300px;
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
     padding: 20px;
     transition: transform 0.3s;
+    text-align: center;
 }
+
+
 
 .recurso:hover {
     transform: translateY(-5px);
 }
 
 .recurso img {
-    max-width: 50px;
+    max-width: 25px;
     margin-bottom: 15px;
 }
 

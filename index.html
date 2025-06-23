@@ -56,17 +56,18 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-        <div id=banner class="banner">
-            <video autoplay muted loop class="banner-video">
+        <div id="banner" class="banner">
+            <video autoplay muted loop class="banner-video" poster="img/banner-fallback.jpg">
                 <source src="videos/banner.mp4" type="video/mp4">
-                Tu navegador no soporta video.
+                <img src="img/banner-fallback.jpg" alt="Banner estático"> <!-- Para navegadores sin soporte de video -->
+        Tu navegador no soporta video.
             </video>
             <div class="banner-text">
                 <h1>Alquimia<br>Del Corazón</h1>
-                <h3>Dondé cada latido cuanta una historia</h3>
+                <h3>Donde cada latido cuenta una historia</h3>
             </div>
-
         </div>
+
     </header>
 
     <section id="videos" class="video-section">
@@ -224,29 +225,67 @@
 
     <div class="recursos-container">
         <div class="recurso">
-            <img src="img/download-pdf.png" alt="Ícono PDF">
+        <img src="img/download-pdf.png" alt="Ícono PDF">
             <div class="recurso-info">
-                <h3>Afirmaciones en 7 Días</h3>
+                <h3>📜 Afirmaciones en 7 Días</h3>
                 <p>Un calendario de afirmaciones diseñado para inspirarte, liberar bloqueos y fortalecer tu paz interior en solo 7 días.</p>
+            </div>
                 <a href="archivos/Afirmaciones7días.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
-            </div>
+            
         </div>
         <div class="recurso">
-            <img src="img/download-pdf.png" alt="Ícono PDF">
+        <img src="img/download-pdf.png" alt="Ícono PDF">
             <div class="recurso-info">
-                <h3>Ejercicios para Una Meditación Efectiva</h3>
+                <h3>🧘‍ Ejercicios para Una Meditación Efectiva</h3>
                 <p>Ejercicios prácticos que puedes implementar hoy mismo para aprender a meditar.</p>
+            </div>    
                 <a href="archivos/GuiaMeditacion.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
-            </div>
+            
         </div>
         <div class="recurso">
             <img src="img/download-pdf.png" alt="Ícono PDF">
             <div class="recurso-info">
-                <h3>Hoja de Trabajo: Liberación Emocional</h3>
-                <p>Una hoja de trabajo para identificar y liberar bloqueos emocionales.</p>
+                <h3>🗣️ Hoja de Trabajo: Liberación Emocional</h3>
+                <p>Una hoja de trabajo para identificar y liberar bloqueos emocionales.</p></div>
                 <a href="archivos/Emociones.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
-            </div>
+            
         </div>
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>🌙 MAPA DEL ALMA – Ciclo Lunar / Menstrual</h3>
+                <p>Una guía para habitar tus fases internas con claridad y propósito.
+Reflexiona, cicla y crea en sintonía con tu ritmo natural y la sabiduría de la luna.</p></div>
+                <a href="archivos/MapaDelAlma.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
+            
+        </div>
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>🧭 Brújula Interna</h3>
+                <p>Aprende a diferenciar entre lo que piensas, lo que sientes y lo que sabes.
+Una herramienta esencial para tomar decisiones desde tu verdad más profunda.</p></div>
+                <a href="archivos/BrujulaInterna.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
+            
+        </div>
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>🕯️ PLAN DE RIQUEZA CONSCIENTE</h3>
+                <p>No es solo dinero. Es energía, dirección y construcción de legado.
+Organiza tus recursos con intención y diseña una vida que te sostenga a largo plazo.</p></div>
+                <a href="archivos/PlanDeRiqueza.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
+            
+        </div>  
+        <div class="recurso">
+            <img src="img/download-pdf.png" alt="Ícono PDF">
+            <div class="recurso-info">
+                <h3>🛠️ 10 Habilidades Críticas que probablemente has ignorado</h3>
+                <p>Un mapa de ideas invisibles que sostienen a los líderes reales.
+Mentalidad, poder personal y estrategia aplicable — todo en un mismo recorrido.</p></div>
+                <a href="archivos/10HabilidadesCriticas.pdf"  target="_blank" download class="boton-descarga">Descargar</a>
+            
+        </div>              
     </div>
 </section>
 
@@ -276,8 +315,15 @@
             <button class="boton-compartir-fb">Compartir en Facebook</button>
         </a>
     </div>
-        <iframe src="https://calendly.com/alquimia-del-corazon85/120min" width="100%" height="600px" frameborder="0"></iframe>
+    <iframe src="https://calendly.com/alquimia-del-corazon85/120min" width="100%" height="600px" frameborder="0"></iframe>
+
 </section>
+
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/alquimia-del-corazon85/120min', text: 'Schedule time with me', color: '#9d00ff', textColor: '#ffffff' }); }</script>
+<!-- Calendly badge widget end -->
 
 <div class="whatsapp-float">
     <a href="https://wa.me/573504799933" target="_blank" aria-label="Chat en WhatsApp">
@@ -318,5 +364,6 @@ mobileMenu.addEventListener('click', () => {
 });
 
     </script>
+
 </body>
 </html>
