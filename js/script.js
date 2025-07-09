@@ -9,6 +9,16 @@ const cartas = [
   "8.png",
   "9.png",
   "10.png",
+  "11.png",
+  "12.png",
+  "13.png",
+  "14.png",
+  "15.png",
+  "16.png",
+  "17.png",
+  "18.png",
+  "19.png",
+  "20.png"
   // ... etc.
 ];
 
@@ -23,6 +33,16 @@ const mensajes = {
   "8.png": "Honra una parte tuya que sueles ocultar.",
   "9.png": "Haz un pequeño acto simbólico de transición.",
   "10.png": "Escribe una verdad que no te has permitido decir.",
+  "11.png": "Haz solo una cosa hoy y suéltala después.",
+  "12.png": "Nombra algo que estás cultivando a largo plazo.",
+  "13.png": "Llora si lo necesitas. O escribe como si lloraras en palabras.",
+  "14.png": "Escribe un deseo que aún no te atreves a cultivar.",
+  "15.png": "¿Qué sentido ha muerto en ti y qué otro quiere nacer?",
+  "16.png": "Escribe: ¿qué me sostiene cuando nada externo lo hace?",
+  "17.png": "Medita sobre algo que aún no comprendes pero intuyes.",
+  "18.png": "Escribe qué parte de ti necesita ser vista por ti misma.",
+  "19.png": "Nombra una situación que se repite. ¿Qué pide cambiar en ti?",
+  "20.png": "Crea un rincón simbólico: altar, vela, objeto con sentido."
   // ... etc.
 };
 
