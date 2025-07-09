@@ -56,27 +56,21 @@ window.onload = () => {
 // Función para compartir carta
 function compartirCarta() {
   const cartaSrc = document.getElementById("carta").src;
-  const cartaNombre = cartaSrc.split("/").pop(); // obtiene '1.png'
+  const cartaNombre = cartaSrc.split("/").pop();
   const mensaje = mensajes[cartaNombre] || "Mi carta del alma 🌙";
 
   const texto = `✨ Mi carta del día:\n"${mensaje}"\n\nDescúbrela tú también en el Mapa del Alma.`;
-
   const whatsappURL = `https://wa.me/?text=${encodeURIComponent(texto)}`;
 
-  if (navigator.share) {
-    // Modo móvil moderno
-    navigator.share({
-      title: "Mi carta del día",
-      text: texto,
-      url: window.location.href
-    });
+  // Forzar WhatsApp si es móvil
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    window.open(whatsappURL, "_blank");
   } else {
-    // Fallback a WhatsApp o copiar
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-      window.open(whatsappURL, "_blank");
-    } else {
-      navigator.clipboard.writeText(texto);
-      alert("Carta copiada. Puedes pegarla en WhatsApp o donde quieras 🌙");
-    }
+    // En PC: copiar mensaje y mostrar alerta
+    navigator.clipboard.writeText(texto);
+    alert("Carta copiada. Pégala en WhatsApp o donde desees 🌙");
   }
 }
+
