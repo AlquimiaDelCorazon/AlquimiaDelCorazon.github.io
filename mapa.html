@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Hipnosis, meditaciones guiadas">
+    <meta name="description" content="Descubre herramientas para tu bienestar emocional y desarrollo personal a través de la Alquimia del Corazón.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="alquimia, transformación, emociones, desarrollo personal, bienestar, corazón">
+    <meta name="author" content="Ligia Andrea Rodriguez Contreras">
+    <link rel="canonical" href="https://alquimiadelcorazon.github.io/">
+    <meta property="og:title" content="Alquimia del Corazón - Transformación Interior">
+    <meta property="og:description" content="Descubre herramientas para tu bienestar emocional y desarrollo personal.">
+    <meta property="og:url" content="https://alquimiadelcorazon.github.io/">
+    <meta property="og:image" content="img/Alquimia del Corazón.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alquimia del Corazón - Transformación Interior">
+    <meta name="twitter:description" content="Herramientas para tu bienestar emocional y desarrollo personal.">
+    <meta name="twitter:image" content="img/Alquimia del Corazón.png">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0"> 
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>Alquimia del Corazón - Transformación Interior</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/Alquimia del Corazón.png" type="image/png">
+</head>
+<body>
+<div class="wrapper">
+<div class="particulas"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="hero-info">
+                    <p>Bogotá - Colombia</p>
+                    <a href="https://wa.me/573504799933" target="_blank">
+                    <i class="fab fa-whatsapp"></i> 3504799933</a>
+                </div>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#testimonios">Testimonios</a></li>
+                <li><a href="index.html#preguntas-frecuentes">FAQs</a></li>
+                <li><a href="downloads.html">Descargables</a></li>
+                <li><a href="mapa.html" target="_blank">Mapa del Alma</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+<div class="contenido-principal">
+<br><br><br><br>
+  <section class="title">
+    <h1>🌙 Mapa del Alma</h1>
+    <p class="subtitulo">Explora tus portales interiores</p>
+  </section>
+
+  <nav class="menu2">
+    <button onclick="mostrarCuarto('oraculo')">🔮 Oráculo</button>
+    <button onclick="mostrarCuarto('escritura')">✍️ Pluma del Alma</button>
+    <button onclick="mostrarCuarto('ritual')">🕯 Ritual del Día</button>
+    <button onclick="mostrarCuarto('intencion')">🌕 Círculo de Intención</button>
+  </nav>
+<main>
+<!-- Cuarto: Oráculo -->
+    <section id="oraculo" class="cuarto oculto">
+      <h2>🔮 El Oráculo</h2>
+      <div class="oraculo-interno">
+        <h3>🌙 Tu carta del alma</h3>
+            <p class="frase-oraculo">El Oráculo no es el todo…<br>
+Es la grieta por donde entra el alma.<br>
+Y desde ahí, todo puede desplegarse.</p>
+        <img id="carta" src="cartas/1.png" alt="Carta del Oráculo"/>
+        <p id="mensaje" class="mensaje"></p>
+
+        <div class="botonera">
+          <button onclick="mostrarCarta()">🔮 Tirar otra carta</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Cuarto: Escritura -->
+    <section id="escritura" class="cuarto oculto">
+      <h2>✍️ Pluma del Alma</h2>
+      <p>Escribe lo que se mueve dentro de ti.</p>
+      <textarea id="textoEscritura" placeholder="Tu escritura simbólica aquí..."></textarea>
+
+        <div class="botonera">
+          <button onclick="liberarEscritura()">🔥 Liberar con fuego</button>
+        </div>
+
+        <p id="mensajeLiberacion" class="mensaje-liberado"></p>
+
+    </section>
+
+    <!-- Cuarto: Ritual -->
+<section id="ritual" class="cuarto oculto">
+  <h2>🕯 Ritual del Día</h2>
+  <div id="ritualVisual" class="ritual-visual">
+    <p id="instruccionRitual">Tu ritual aparecerá aquí...</p>
+    <button onclick="mostrarRitual()">✨ Mostrar Ritual</button>
+    <div id="efectoRitual" class="latido">🌟</div>
+  </div>
+</section>
+
+
+
+    <!-- Cuarto: Lunar -->
+<section id="intencion" class="cuarto oculto">
+  <h2><span id="emojiLuna">🌙</span> Círculo de Intención Lunar</h2>
+  <p>Conecta con la fase lunar actual y entrega tu intención.</p>
+
+  <label for="fase">Fase lunar:</label>
+  <select id="fase">
+    <option value="nueva">🌑 Luna Nueva</option>
+    <option value="creciente">🌒 Luna Creciente</option>
+    <option value="llena">🌕 Luna Llena</option>
+    <option value="menguante">🌘 Luna Menguante</option>
+  </select>
+
+  <textarea id="intencionInput" placeholder="Mi intención es..."></textarea>
+  <button onclick="ofrecerIntencion()">🌙 Ofrecer Intención</button>
+
+  <p id="mensajeFase" class="mensaje-fase"></p>
+  <p id="respuestaLunar" class="respuesta-lunar"></p>
+</section>
+</main>
+
+<div class="whatsapp-float">
+    <a href="https://wa.me/573504799933" target="_blank" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    &copy; 2024 Derechos reservados | Alquimia Del Corazón
+    <div class="footer-links">
+        <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+        <a href="politicas.html" target="_blank">Políticas de Privacidad</a>
+    </div>
+</footer>
+</div>
+</div>
+<script>
+    let index = 0;
+
+    function cambiarSlide(direccion) {
+        const slides = document.querySelectorAll('.slide');
+        slides[index].classList.remove('active'); // Remover la clase activa de la diapositiva actual
+        index = (index + direccion + slides.length) % slides.length; // Calcular el nuevo índice
+        slides[index].classList.add('active'); // Agregar la clase activa a la nueva diapositiva
+    }
+
+    // Inicializar mostrando la primera diapositiva
+    document.querySelectorAll('.slide')[index].classList.add('active');
+</script>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+mobileMenu.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+    </script>
+  <script src="js/spa.js"></script>
+</body>
+</html>
