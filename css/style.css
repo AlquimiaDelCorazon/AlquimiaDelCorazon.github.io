@@ -1146,6 +1146,217 @@ img#carta.flip {
   }
 }
 
+/* ============ SECCIÓN MANDALA ============ */
+#mandala {
+  padding: 3rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  background: #0d0d0d;
+  color: #fff;
+  height: auto;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+}
+
+
+#mandala .title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.mandala-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#mandala-container {
+  width: 100%;
+  height: 800px;
+  background-color: #111;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+/* ============ BOTONES MANDALA ============ */
+.botones-mandala {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boton-mandala {
+  padding: 0.7rem 1.5rem;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #666;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.boton-mandala:hover {
+  background-color: #444;
+  transform: scale(1.05);
+}
+
+.boton-mandala:active {
+  background-color: #333;
+  transform: scale(0.98);
+}
+
+.mandala-svg-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.color.selected {
+  outline: 2px solid white;
+  box-shadow: 0 0 5px white;
+  transform: scale(1.1);
+}
+
+
+.switch-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.switch-buttons button {
+  background: #000;
+  border: 2px solid #ccc;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.switch-buttons button.activo {
+  background-color: #6E44DB;
+  border-color: #fff;
+}
+
+    .seccion-mandala {
+      display: none;
+      border: 1px solid #444;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .seccion-mandala.visible {
+      display: block;
+    }
+
+.color-palette {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+#colorPicker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(255,255,255,0.5);
+  cursor: pointer;
+  padding: 0;
+}
+
+.custom-color-picker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--picker-gradient, conic-gradient(#f44336, #e91e63, #9c27b0, #3f51b5, #009688, #ff9800));
+
+
+ /* Color dinámico */
+  border: 2px solid #ccc;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(255,255,255,0.4);
+  transition: background-color 0.3s ease;
+}
+
+.custom-color-picker input[type="color"] {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.custom-color-picker.color-elegido {
+  background: var(--picker-color, #ffffff);
+}
+
+.mandala-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.mandala-selector button {
+  flex: 1 1 auto;
+  min-width: 100px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.mandala-selector button:hover {
+  background: #555;
+}
+
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     .menu-toggle {
@@ -1227,11 +1438,53 @@ img#carta.flip {
         font-size: 0.8rem; /* Ajustar el texto para dispositivos más pequeños */
         padding: 10px 0; /* Reducir el espacio para mayor compatibilidad */
     }
+
+     #mandala .title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mandala-box {
+    padding: 1.5rem;
+  }
+
+  #mandala-container {
+    height: 350px;
+  }
+
+  .boton-mandala {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
     .icono {
         font-size: 2rem; /* Ajustar los iconos para pantallas pequeñas */
     }
+     #mandala .title {
+    font-size: 1.6rem;
+  }
+
+  .mandala-box {
+    padding: 1rem;
+  }
+
+  #mandala-container {
+    height: 300px;
+  }
+
+  .boton-mandala {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+    .mandala-selector {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mandala-selector button {
+    width: 100%;
+  }
 }
 

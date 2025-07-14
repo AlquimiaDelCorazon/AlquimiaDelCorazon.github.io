@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alquimia del Corazón - Mandalas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="particulas"></div>
+
+    <!-- NAV -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <div class="hero-info">
+            <p>Bogotá - Colombia</p>
+            <a href="https://wa.me/573504799933" target="_blank">
+              <i class="fab fa-whatsapp"></i> 3504799933
+            </a>
+          </div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#testimonios">Testimonios</a></li>
+          <li><a href="index.html#preguntas-frecuentes">FAQs</a></li>
+          <li><a href="downloads.html">Descargables</a></li>
+          <li><a href="mapa.html" target="_blank">Mapa del Alma</a></li>
+          <li><a href="mandalas.html" target="_blank">Mandalas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+<div class="contenido-principal">
+
+      <!-- Botones -->
+<div class="switch-buttons">
+    <button id="btn-crear" class="activo">🎨 Crear Mandala</button>
+    <button id="btn-colorear">🖌️ Colorear Mandala</button>
+  </div>
+
+      <section id="mandala" class="seccion-mandala visible">
+        <h1 class="title">🎨 Creador de Mandalas</h1>
+        <div class="mandala-box">
+          <div id="mandala-container"></div>
+          <div class="botones-mandala">
+            <button class="boton-mandala" id="guardarMandala">Guardar</button>
+            <button class="boton-mandala" id="limpiarMandala">Limpiar</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección: Mandala Coloreable (SVG) -->
+<section id="mandala-svg" class="seccion-mandala">
+  <h1 class="title">🖌️ Colorea tu Mandala</h1>
+
+  <div class="color-palette">
+    <label class="custom-color-picker">
+      <input type="color" id="colorPicker" />
+    </label>
+  </div>
+
+  <!-- 🌀 Selector de mandalas -->
+  <div class="mandala-selector">
+    <button data-file="mandala1.svg">Mandala 1</button>
+    <button data-file="mandala2.svg">Mandala 2</button>
+    <button data-file="mandala3.svg">Mandala 3</button>
+  </div>
+
+  <!-- 🖼️ Contenedor donde se muestra el mandala actual -->
+  <div class="mandala-svg-container">
+    <div id="mandala-display"></div>
+  </div>
+</section>
+
+      <!-- WhatsApp flotante -->
+      <div class="whatsapp-float">
+        <a href="https://wa.me/573504799933" target="_blank" aria-label="Chat en WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        &copy; 2024 Derechos reservados | Alquimia Del Corazón
+        <div class="footer-links">
+          <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+          <a href="politicas.html" target="_blank">Políticas de Privacidad</a>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    // Menú móvil
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+    mobileMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // --- VARIABLES GLOBALES ---
+    let selectedColor = "#f44336";
+
+    // --- ELEMENTOS ---
+    const btnCrear = document.getElementById('btn-crear');
+    const btnColorear = document.getElementById('btn-colorear');
+    const seccionCrear = document.getElementById('mandala');
+    const seccionColorear = document.getElementById('mandala-svg');
+    const display = document.getElementById("mandala-display");
+    const colorPicker = document.getElementById("colorPicker");
+    const labelPicker = document.querySelector(".custom-color-picker");
+
+    // --- ALTERNAR SECCIONES ---
+    btnCrear.addEventListener('click', () => {
+      seccionCrear.classList.add('visible');
+      seccionColorear.classList.remove('visible');
+      btnCrear.classList.add('activo');
+      btnColorear.classList.remove('activo');
+    });
+
+    btnColorear.addEventListener('click', () => {
+      seccionCrear.classList.remove('visible');
+      seccionColorear.classList.add('visible');
+      btnCrear.classList.remove('activo');
+      btnColorear.classList.add('activo');
+    });
+
+    // --- SELECCIÓN DE COLOR CON BOTONES ---
+    document.querySelectorAll(".color").forEach(btn => {
+      btn.addEventListener("click", () => {
+        selectedColor = btn.getAttribute("data-color");
+        document.querySelectorAll(".color").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+      });
+    });
+
+    // --- SELECCIÓN DE COLOR CON PICKER ---
+    colorPicker.addEventListener("input", () => {
+      selectedColor = colorPicker.value;
+      labelPicker.classList.add("color-elegido");
+      labelPicker.style.setProperty("--picker-color", selectedColor);
+    });
+
+    // --- FUNCIÓN: CARGAR SVG Y HACERLO PINABLE ---
+    function cargarSVG(nombreArchivo) {
+      fetch(`mandalas/${nombreArchivo}`)
+        .then(res => res.text())
+        .then(svgText => {
+          display.innerHTML = svgText;
+
+          const svg = display.querySelector("svg");
+          if (!svg) return;
+
+          svg.id = "mandala-svg-pintable";
+
+          // Agrega eventos a cada parte del SVG
+          svg.querySelectorAll("*").forEach(el => {
+            if (el.tagName !== "svg") {
+              el.addEventListener("click", () => {
+                el.setAttribute("fill", selectedColor);
+              });
+            }
+          });
+        })
+        .catch(err => console.error("Error cargando SVG:", err));
+    }
+
+    // --- BOTONES DE SELECCIÓN DE MANDALA ---
+    document.querySelectorAll(".mandala-selector button").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const archivo = btn.getAttribute("data-file");
+        if (archivo) cargarSVG(archivo);
+      });
+    });
+
+    // --- PINTAR SVG GLOBALMENTE (por si acaso) ---
+    document.addEventListener("click", e => {
+      const target = e.target;
+      const svg = document.getElementById("mandala-svg-pintable");
+      if (svg && svg.contains(target) && target.tagName !== "svg") {
+        target.setAttribute("fill", selectedColor);
+      }
+    });
+
+    // --- CARGAR SVG POR DEFECTO ---
+    cargarSVG("mandala1.svg");
+  });
+</script>
+
+
+  <script src="js/mandala.js"></script>
+  <script src="js/mandala-color.js"></script>
+</body>
+</html>
